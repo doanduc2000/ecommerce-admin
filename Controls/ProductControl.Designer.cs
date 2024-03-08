@@ -33,11 +33,11 @@
             tbPriceProduct = new Label();
             txtPriceProduct = new TextBox();
             lbNumbericProduct = new Label();
-            textBox2 = new TextBox();
+            txtNumbericProduct = new TextBox();
             lbImageProduct = new Label();
             txtImageProduct = new TextBox();
             lbDesc = new Label();
-            textBox4 = new TextBox();
+            txtDescProduct = new TextBox();
             btnDeleteProduct = new Button();
             btnEditProduct = new Button();
             btnAddProduct = new Button();
@@ -67,7 +67,6 @@
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(380, 26);
             txtProductName.TabIndex = 1;
-            txtProductName.TextChanged += txtProductName_TextChanged;
             // 
             // tbPriceProduct
             // 
@@ -87,7 +86,6 @@
             txtPriceProduct.Name = "txtPriceProduct";
             txtPriceProduct.Size = new Size(180, 26);
             txtPriceProduct.TabIndex = 1;
-            txtPriceProduct.TextChanged += txtProductName_TextChanged;
             // 
             // lbNumbericProduct
             // 
@@ -99,15 +97,14 @@
             lbNumbericProduct.TabIndex = 0;
             lbNumbericProduct.Text = "Numberic";
             // 
-            // textBox2
+            // txtNumbericProduct
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(217, 110);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(180, 26);
-            textBox2.TabIndex = 1;
-            textBox2.TextChanged += txtProductName_TextChanged;
+            txtNumbericProduct.BorderStyle = BorderStyle.FixedSingle;
+            txtNumbericProduct.Location = new Point(217, 110);
+            txtNumbericProduct.Margin = new Padding(4, 3, 4, 3);
+            txtNumbericProduct.Name = "txtNumbericProduct";
+            txtNumbericProduct.Size = new Size(180, 26);
+            txtNumbericProduct.TabIndex = 1;
             // 
             // lbImageProduct
             // 
@@ -127,7 +124,6 @@
             txtImageProduct.Name = "txtImageProduct";
             txtImageProduct.Size = new Size(380, 26);
             txtImageProduct.TabIndex = 1;
-            txtImageProduct.TextChanged += txtProductName_TextChanged;
             // 
             // lbDesc
             // 
@@ -139,16 +135,15 @@
             lbDesc.TabIndex = 0;
             lbDesc.Text = "Description";
             // 
-            // textBox4
+            // txtDescProduct
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(17, 313);
-            textBox4.Margin = new Padding(4, 3, 4, 3);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(380, 112);
-            textBox4.TabIndex = 1;
-            textBox4.TextChanged += txtProductName_TextChanged;
+            txtDescProduct.BorderStyle = BorderStyle.FixedSingle;
+            txtDescProduct.Location = new Point(17, 313);
+            txtDescProduct.Margin = new Padding(4, 3, 4, 3);
+            txtDescProduct.Multiline = true;
+            txtDescProduct.Name = "txtDescProduct";
+            txtDescProduct.Size = new Size(380, 112);
+            txtDescProduct.TabIndex = 1;
             // 
             // btnDeleteProduct
             // 
@@ -161,6 +156,7 @@
             btnDeleteProduct.TabIndex = 12;
             btnDeleteProduct.Text = "Delete";
             btnDeleteProduct.UseVisualStyleBackColor = true;
+            btnDeleteProduct.Click += btnDeleteProduct_Click;
             // 
             // btnEditProduct
             // 
@@ -173,6 +169,7 @@
             btnEditProduct.TabIndex = 13;
             btnEditProduct.Text = "Edit";
             btnEditProduct.UseVisualStyleBackColor = true;
+            btnEditProduct.Click += btnEditProduct_Click;
             // 
             // btnAddProduct
             // 
@@ -183,6 +180,7 @@
             btnAddProduct.TabIndex = 14;
             btnAddProduct.Text = "Add ";
             btnAddProduct.UseVisualStyleBackColor = true;
+            btnAddProduct.Click += btnAddProduct_Click;
             // 
             // lbCategory
             // 
@@ -201,7 +199,6 @@
             cbCategory.Name = "cbCategory";
             cbCategory.Size = new Size(380, 26);
             cbCategory.TabIndex = 15;
-            cbCategory.SelectedIndexChanged += cbCategory_SelectedIndexChanged;
             // 
             // btnSearchProduct
             // 
@@ -222,6 +219,8 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(519, 446);
             dataGridView1.TabIndex = 17;
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // txtSearchCategory
             // 
@@ -245,12 +244,12 @@
             Controls.Add(btnDeleteProduct);
             Controls.Add(btnEditProduct);
             Controls.Add(btnAddProduct);
-            Controls.Add(textBox4);
+            Controls.Add(txtDescProduct);
             Controls.Add(lbDesc);
             Controls.Add(lbCategory);
             Controls.Add(txtImageProduct);
             Controls.Add(lbImageProduct);
-            Controls.Add(textBox2);
+            Controls.Add(txtNumbericProduct);
             Controls.Add(lbNumbericProduct);
             Controls.Add(txtPriceProduct);
             Controls.Add(tbPriceProduct);
@@ -265,6 +264,8 @@
             PerformLayout();
         }
 
+
+
         #endregion
 
         private Label lbProductName;
@@ -272,11 +273,11 @@
         private Label tbPriceProduct;
         private TextBox txtPriceProduct;
         private Label lbNumbericProduct;
-        private TextBox textBox2;
+        private TextBox txtNumbericProduct;
         private Label lbImageProduct;
         private TextBox txtImageProduct;
         private Label lbDesc;
-        private TextBox textBox4;
+        private TextBox txtDescProduct;
         private Button btnDeleteProduct;
         private Button btnEditProduct;
         private Button btnAddProduct;

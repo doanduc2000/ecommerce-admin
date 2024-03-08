@@ -85,6 +85,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(519, 454);
             dataGridView1.TabIndex = 7;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // txtSearchCategory

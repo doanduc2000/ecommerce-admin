@@ -13,8 +13,8 @@ namespace EcommerceAdmin.Models
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        [BsonElement("categories")] public required ObjectId CategoryId { get; set; }
-        [BsonElement("name")] public required string Name { get; set; }
+        [BsonElement("categories")] public ObjectId CategoryId { get; set; }
+        [BsonElement("name")] public string Name { get; set; }
         [BsonElement("price")] public double? Price { get; set; }
         [BsonElement("numberic")] public int? Numberic { get; set; }
         [BsonElement("description")] public string? Description { get; set; }
@@ -28,7 +28,7 @@ namespace EcommerceAdmin.Models
 
         [BsonElement("__v")]
         public int V { get; set; }
-        [BsonIgnore] public required Category Category { get; set; }
+        [BsonIgnore] public Category Category { get; set; }
 
     }
 }

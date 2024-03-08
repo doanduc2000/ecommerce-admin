@@ -137,6 +137,7 @@
             txtPhone.Size = new Size(243, 19);
             txtPhone.TabIndex = 8;
             txtPhone.Text = "Type your phone number";
+          
             // 
             // txtPassword
             // 

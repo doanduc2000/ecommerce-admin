@@ -34,3 +34,4 @@ G:\other-job\ecommerce\EcommerceAdmin\obj\Debug\net8.0-windows\EcommerceAdmin.cs
 G:\other-job\ecommerce\EcommerceAdmin\obj\Debug\net8.0-windows\EcommerceAdmin.csproj.CopyComplete
 G:\other-job\ecommerce\EcommerceAdmin\obj\Debug\net8.0-windows\EcommerceAdmin.Controls.CategoryControl.resources
 G:\other-job\ecommerce\EcommerceAdmin\obj\Debug\net8.0-windows\EcommerceAdmin.Controls.ProductControl.resources
+G:\other-job\ecommerce\EcommerceAdmin\obj\Debug\net8.0-windows\EcommerceAdmin.sourcelink.json
